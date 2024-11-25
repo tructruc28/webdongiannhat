@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+/* Định dạng header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}s
+header .trangchu ul {
+    list-style: none;
+}
+header .trangchu li {
+    display: inline-block;
+}
+header .trangchu a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header .logo img {
+    height: 50px;
+}
+header .other ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+header .other ul li {
+    position: relative;
+}
+header .other ul li input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 200px;
+}
+header .other ul li .search i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: pointer;
+}
+header .other ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+}
+header .other ul li a:hover {
+    color: #2c2e30;
+}
+header .other ul li a.fa-shopping-bag::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: block;
+}
+header .other ul li a.fa-paw {
+    font-size: 18px;
+    color: black;
+}
+header .other ul li a.fa-shopping-bag {
+    font-size: 20px;
+    color: black;
+}
+
+/* định dạng banner */
+.banner {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: slide 12s infinite;
+}
+
+.banner img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.banner img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.banner img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* định dạng product */
+.container h2 {
+    margin-top: 50px; 
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: calc(33.333% - 20px);
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.product-item button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.product-item button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-item {
+        width: 100%;
+    }
+}
+/* định dạng footer */
+footer {
+    background-color: #171616;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+footer div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+footer .instruct,
+footer .contact,
+footer .info {
+    padding: 10px;
+}
+
+footer .contact div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+footer .contact div a:hover {
+    color: #323335;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer div {
+        margin-bottom: 20px;
+    }
+}
+
